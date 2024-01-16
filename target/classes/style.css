@@ -1,0 +1,81 @@
+/* style.css - Styles correspondant à la mise en page et aux couleurs de la maquette HELHa */
+
+/* Styles de base pour garantir la cohérence entre les navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+#header {
+    background-color: #003366; /* Une couleur bleu foncé supposée pour l'en-tête */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+}
+
+#navBar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#navBar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #005792; /* Une couleur bleu supposée pour les liens de navigation */
+    border-radius: 3px;
+}
+
+#navBar li a:hover,
+#navBar li a.active {
+    background-color: #007bff; /* Une couleur bleu clair supposée pour le lien actif ou au survol */
+}
+
+/* Style spécifique pour les liens de connexion et d'inscription */
+#userLinks {
+    display: flex;
+    align-items: center;
+}
+
+#loginLink,
+#signupLink {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+}
+
+#signupLink {
+    background-color: #f8c146; /* Une couleur orange supposée pour le bouton d'inscription */
+    border-radius: 3px;
+}
+
+#loginLink:hover,
+#signupLink:hover {
+    opacity: 0.8;
+}
+
+#mainContent {
+    text-align: center;
+    padding: 20px;
+}
+
+#mainContent p {
+    color: #333;
+    margin-top: 20px;
+}

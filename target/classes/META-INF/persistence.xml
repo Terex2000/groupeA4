@@ -1,23 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<persistence xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd" version="3.0">
-	<persistence-unit name="groupea4" transaction-type="JTA">
-	<jta-data-source>jdbc/groupea4</jta-data-source>
-	
-	<!--  <persistence-unit name="Visiteur" transaction-type="RESOURCE_LOCAL">
-		 <class>be.helha.aemt.audric.entities.Utilisateur</class>
-		<class>be.helha.aemt.audric.entities.Visiteur</class>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+	version="3.0">
+
+	<persistence-unit name="groupeA4-JTA"
+		transaction-type="JTA">
+		<jta-data-source>jdbc/groupeA4</jta-data-source>
+		<class>be.helha.aemt.groupea4.entities.Teacher</class>
+		<class>be.helha.aemt.groupea4.entities.Utilisateur</class>
 		
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
 		<properties>
-			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbutilisateurs"/>
-			<property name="jakarta.persistence.schema-generation.database.action" value="create"/>
-				
-			<property name="eclipselink.jdbc.property.useSSL" value="false"/>
-			<property name="eclipselink.jdbc.property.requireSSL" value="false"/>
+			<property
+				name="jakarta.persistence.schema-generation.database.action"
+				value="create" />
+		</properties>
+	</persistence-unit>
 
-			<property name="jakarta.persistence.jdbc.user" value="test"/>
-			<property name="jakarta.persistence.jdbc.password" value="test"/>
-
-		</properties> -->
+	<persistence-unit name="groupeA4-LOCAL"
+		transaction-type="RESOURCE_LOCAL">
+		<class>be.helha.aemt.groupea4.entities.Teacher</class>
+		<class>be.helha.aemt.groupea4.entities.Utilisateur</class>
 		
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<!-- <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/> -->
+			<property name="jakarta.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/a4" />
+			<property
+				name="jakarta.persistence.schema-generation.database.action"
+				value="create" />
+
+			<property name="jakarta.persistence.jdbc.user" value="ua4"></property>
+			<property name="jakarta.persistence.jdbc.password"
+				value="3024"></property>
+
+		</properties>
 	</persistence-unit>
 </persistence>

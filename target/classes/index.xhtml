@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html xmlns:jsf="http://xmlns.jcp.org/jsf"
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
 <head>
@@ -15,4 +15,77 @@
 		<h:inputText value="#{bonjourControl.nom}"></h:inputText> 	
 		<h:commandButton value="Next" action="#{bonjourControl.doNext()}"></h:commandButton>
 </h:form>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Accueil | HELHa</title>
+     Assurez-vous d'inclure le lien vers vos feuilles de style CSS ici 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</h:head>
+
+<h:body>
+
+    <div id="header">
+        <h1>HELHa</h1>
+         Navigation Bar 
+        <ul id="navBar">
+            <li><h:link outcome="/index" value="Accueil" /></li>
+            <li><h:link outcome="/secretaires" value="Secrétaires" /></li>
+            <li><h:link outcome="/professeur" value="Professeur" /></li>
+            <li><h:link outcome="/ancien" value="Ancien" /></li>
+        </ul>
+        <h:link outcome="/connexion" value="Connexion" id="loginLink" />
+        <h:link outcome="/inscription" value="Inscription?" id="signupLink" />
+    </div>
+
+    <div id="mainContent">
+       <h:graphicImage name="" alt="Bienvenue"/>
+        <p>Bienvenue sur la plateforme de gestion des anciens étudiants de la Haute École Louvain en Hainaut</p>
+    </div>
+
+</h:body>
+</html>-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Accueil | HELHa</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</h:head>
+
+<h:body>
+
+    <div id="header">
+        <!-- Logo -->
+        <h:graphicImage name="LogoHelha.png" alt="HELHa" id="logo"/>
+
+        <!-- Navigation Bar -->
+        <ul id="navBar">
+            <li><h:link outcome="/index" value="Accueil" /></li>
+            <li><h:link outcome="/secretaires" value="Secrétaires" /></li>
+            <li><h:link outcome="/professeur" value="Professeur" /></li>
+            <li><h:link outcome="/ancien" value="Ancien" /></li>
+        </ul>
+
+        <!-- Connexion et Inscription -->
+        <div id="userLinks">
+            <h:link outcome="/connexion" value="Connexion" id="loginLink" />
+            <h:link outcome="/inscription" value="Inscription?" id="signupLink" />
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <!-- Assurez-vous que l'attribut 'name' ait un chemin valide vers l'image de bienvenue -->
+        <h:graphicImage name="LogoHelha.png" alt="Bienvenue"/>
+        <p>Bienvenue sur la plateforme de gestion des anciens étudiants de la Haute École Louvain en Hainaut</p>
+    </div>
+
+</h:body>
 </html>
+

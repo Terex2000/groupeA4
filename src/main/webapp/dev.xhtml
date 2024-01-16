@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>Groupe A4</title>
+	<meta name="author" content="The Author"></meta>
+</h:head>
+<h:body>
+	<h:form>
+		<h:commandButton action="#{ fillDatabaseControl.doAddAll() }"
+			value="Add all" />
+
+		<!-- <h:commandButton action="#{ fillDatabaseControl.doAddTestTeacher() }"
+			value="Ajouter prof" />-->
+
+		<h:commandButton value="Ajouter utilisateurs"
+			action="#{ fillDatabaseControl.doAddMockUtilisateur() }" />
+
+	</h:form>
+</h:body>
+</html>
